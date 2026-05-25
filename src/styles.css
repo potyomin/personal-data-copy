@@ -1,0 +1,266 @@
+﻿:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1f2933;
+  background-color: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f4f6fb 0%, #eef2f8 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.app-header {
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 12px;
+  font-size: 1.9rem;
+}
+
+.mode-switch {
+  display: inline-flex;
+  background: #dde5f3;
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.mode-switch button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  background: transparent;
+  cursor: pointer;
+  color: #334155;
+}
+
+.mode-switch button.active {
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.mode-hint {
+  margin: 10px 0 0;
+  color: #475569;
+}
+
+.field-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.field-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #d8e0ef;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.field-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.field-card label {
+  display: block;
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.field-card input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fff;
+}
+
+.subsection {
+  margin-top: 10px;
+}
+
+.sub-label {
+  margin: 0 0 6px;
+  font-size: 0.86rem;
+  color: #475569;
+}
+
+.grid-2,
+.grid-3,
+.custom-edit-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.custom-edit-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.copy-value {
+  width: 100%;
+  border: 1px solid #bfd0e8;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f0f6ff;
+  color: #0f172a;
+  cursor: pointer;
+  text-align: left;
+}
+
+.copy-value:hover,
+.copy-value:focus-visible {
+  border-color: #5b8bd8;
+  background: #e5f0ff;
+  outline: none;
+}
+
+.combat-mode .copy-value {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.settings {
+  margin-top: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d8e0ef;
+  padding: 14px;
+}
+
+.settings h2 {
+  margin: 0 0 12px;
+}
+
+.settings-list {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.settings button,
+.add-custom button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #1e293b;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.settings button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.settings .danger,
+.add-custom .danger,
+button.danger {
+  border-color: #f1a6a6;
+  color: #9f1239;
+  background: #fff1f2;
+}
+
+.add-custom {
+  margin-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 14px;
+}
+
+.add-custom h3 {
+  margin: 0 0 8px;
+}
+
+.add-custom input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+}
+
+.toast-success {
+  background: #256f3c;
+}
+
+.toast-error {
+  background: #b91c1c;
+}
+
+@media (max-width: 720px) {
+  .grid-3,
+  .grid-2,
+  .custom-edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settings-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
